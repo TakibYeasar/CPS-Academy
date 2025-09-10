@@ -1,6 +1,6 @@
 
 // Problem link ===>> https://codeforces.com/contest/44/problem/A
-// submission link ===>>
+// submission link ===>> https://codeforces.com/contest/44/submission/337964991
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -18,11 +18,17 @@ int main()
     cout.tie(nullptr);
     cin.tie(nullptr);
 
-    ll t;
-    cin >> t;
-    while(t--){
-        
+    ll n;
+    cin >> n;
+
+    set<pair<string, string>> st;
+    string s1, s2;
+    for (ll i = 0; i < n; i++)
+    {
+        cin >> s1 >> s2;
+        st.insert({s1, s2});
     }
+    cout << st.size() << endl;
 
     return 0;
 }
