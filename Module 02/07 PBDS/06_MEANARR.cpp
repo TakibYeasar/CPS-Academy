@@ -1,5 +1,5 @@
 
-// Problem link ===>> 
+// Problem link ===>> https://www.spoj.com/problems/MEANARR/
 // submission link ===>>
 
 #include <bits/stdc++.h>

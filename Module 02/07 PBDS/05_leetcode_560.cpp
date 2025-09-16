@@ -1,6 +1,6 @@
 
-// Problem link ===>> 
-// submission link ===>>
+// Problem link ===>> https://leetcode.com/problems/subarray-sum-equals-k/
+// submission link ===>> https://leetcode.com/problems/subarray-sum-equals-k/submissions/1597145632/
 
 #include <bits/stdc++.h>
 #include <ext/pb_ds/assoc_container.hpp>
@@ -25,12 +25,37 @@ template <typename K, typename V>
 using ordered_map_mul = tree<
     K, V, less_equal<K>, rb_tree_tag, tree_order_statistics_node_update>;
 
+class Solution
+{
+public:
+    int subarraySum(vector<int> &nums, int k)
+    {
+        unordered_map<int, int> cnt;
+        ll sum = 0;
+        ll ans = 0;
+        cnt[0] = 1;
+        for (int x : nums)
+        {
+            sum += x;
+            ans += cnt[sum - k];
+            cnt[sum]++;
+        }
+        return ans;
+    }
+};
+
 int main()
 {
     ios_base::sync_with_stdio(false);
     cout.tie(nullptr);
     cin.tie(nullptr);
-    
-    
+
+    ll t;
+    cin >> t;
+    while (t--)
+    {
+        ll n;
+        cin >> n;
+    }
     return 0;
 }
